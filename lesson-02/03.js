@@ -7,7 +7,7 @@
 const score = 70 // тестовое значение, можно изменять
 let grade
 // your code
-switch (score) {
+switch (true) {
     case 0 <= score && score <= 49:
         grade = 'F';
         break;

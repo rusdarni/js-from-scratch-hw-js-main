@@ -8,7 +8,7 @@ function isNumeric(str) {
     return false
   }
   let changedStr = +str
-  if (str == changedStr && typeof str !== false) {
+  if (str == changedStr) {
     return true
   }
   else return false

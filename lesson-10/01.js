@@ -30,7 +30,7 @@ const model = {
     view.renderMovies(this.movies)
   },
   deleteMovie(movieId){
-    this.movies = filter((movie) => movie.id !== movieId)
+    this.movies = this.movies.filter((mov) => mov.id !== movieId)
     view.renderMovies(this.movies)
   }
   // your code
@@ -52,6 +52,7 @@ const view = {
 
       inputTitle.value = ''
       inputDescription.value = ''
+
     })
 
     // your code
@@ -107,7 +108,7 @@ const controller = {
 
   deleteMovie(movieId){
     model.deleteMovie(movieId)
-    messageBox.textContent = "Фильм успешно удалён!"
+    view.displayMessage("Фильм успешно удалён!")
   }
 }
 
